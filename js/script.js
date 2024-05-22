@@ -13,15 +13,17 @@ for(let i = 0; i < teamMembers.nome.length; i++){
     
     let nameEl = document.createElement("h2");
     nameEl.append(`Nome:${teamMembers.nome[i]}`);
-    articleEl.appendChild(nameEl);
+    articleEl.replaceChild(nameEl);
 
     let positionEl = document.createElement("h4");
-    nameEl.append(`Ruolo:${teamMembers.position[i]}`);
-    articleEl.appendChild(nameEl);
+    positionEl.append(`Ruolo:${teamMembers.position[i]}`);
+    articleEl.replaceChild(nameEl);
 
     let photoEl  = document.createElement("img");
-    nameEl.append(`Foto:${teamMembers.photo[i]}`);
-    articleEl.appendChild(nameEl);
+    photoEl.append(`Foto:${teamMembers.photo[i]}`);
+    articleEl.replaceChild(nameEl);
+
+    articleEl.replaceChild()
     
 }
 
