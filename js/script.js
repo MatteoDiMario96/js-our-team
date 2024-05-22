@@ -9,9 +9,20 @@ let cardDescriptionEl;
 for(let i = 0; i < teamMembers.nome.length; i++){
     console.log(`Nome:${teamMembers.nome[i]}`,`Ruolo:${teamMembers.position[i]}`,`Foto:${teamMembers.photo[i]}`);
     // createEl(cardEl, divAppend, "article",`Nome:${teamMembers.nome[i]} `+` Ruolo:${teamMembers.position[i]} `+` Foto:${teamMembers.photo[i]} `)
-    let articleAppend = document.createElement("article");
-    // let nomeHTwoEl = createEl(cardDescriptionEl, articleAppend, "h2", "ciao")
-    articleAppend = createEl(cardEl, divAppend, "article", createEl(cardDescriptionEl, articleAppend, "h2", "ciao"));
+    let articleEl = createEl(cardEl, divAppend, "article", "")
+    
+    let nameEl = document.createElement("h2");
+    nameEl.append(`Nome:${teamMembers.nome[i]}`);
+    articleEl.appendChild(nameEl);
+
+    let positionEl = document.createElement("h4");
+    nameEl.append(`Ruolo:${teamMembers.position[i]}`);
+    articleEl.appendChild(nameEl);
+
+    let photoEl  = document.createElement("img");
+    nameEl.append(`Foto:${teamMembers.photo[i]}`);
+    articleEl.appendChild(nameEl);
+    
 }
 
 
